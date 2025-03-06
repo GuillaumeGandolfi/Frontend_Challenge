@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tu n'as pas besoin de modifier cette section normalement */
+@layer base {
+  :root {
+    --background: 261 92% 5%;
+
+    --foreground: 0 0% 98%;
+
+    --card: 260 100% 7%;
+
+    --card-foreground: 260 20% 97%;
+
+    --popover: 240 10% 3.9%;
+
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 249 85% 65%;
+
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 241 31% 62%;
+
+    --muted-foreground: 241 31% 62%;
+
+    --accent: 240 3.7% 15.9%;
+
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 45% 35%;
+
+    --input: 240 3.7% 15.9%;
+
+    --ring: 240 4.9% 83.9%;
+
+    --chart-1: 220 70% 50%;
+
+    --chart-2: 160 60% 45%;
+
+    --chart-3: 30 80% 55%;
+
+    --chart-4: 280 65% 60%;
+
+    --chart-5: 340 75% 55%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    text-wrap: pretty;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.font-aeonik {
+  font-family: "Aeonik Pro Medium", "Poppins", sans-serif;
+  font-weight: normal;
+}
