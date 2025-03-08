@@ -1,5 +1,9 @@
-//  Pense à lire le README.MD avant de commencer !
+import GridPatternBackground from "./components/GridPatternBackground";
 
 export default function Home() {
-  return <main className="">{/*Tu peux commencer à coder ici ! */}</main>;
+  return (
+    <main className="relative min-h-screen overflow-hidden">
+      <GridPatternBackground />
+    </main>
+  );
 }
