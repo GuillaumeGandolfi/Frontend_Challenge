@@ -50,28 +50,25 @@ export function Marquee({
     let reqId: number;
 
     const animate = (time: number) => {
-      const dt = (time - prevTime) / 1000; // en secondes
+      const dt = (time - prevTime) / 1000;
       prevTime = time;
 
       for (const obj of elements) {
         if (direction === "ltr") {
           obj.x += speed * dt;
-          // Si l'élément dépasse le bord droit, on le remet à gauche
-          if (obj.x > containerWidth) {
+          while (obj.x > containerWidth) {
             const minX = Math.min(...elements.map((o) => o.x));
             obj.x = minX - obj.el.offsetWidth - gap;
           }
         } else {
           obj.x -= speed * dt;
-          // Si l'élément sort à gauche, on le remet à droite
-          if (obj.x + obj.el.offsetWidth < 0) {
+          while (obj.x + obj.el.offsetWidth < 0) {
             const maxX = Math.max(
               ...elements.map((o) => o.x + o.el.offsetWidth)
             );
             obj.x = maxX + gap;
           }
         }
-
         obj.el.style.transform = `translate3d(${obj.x}px, 0, 0)`;
       }
 
