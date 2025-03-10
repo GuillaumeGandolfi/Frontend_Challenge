@@ -71,9 +71,11 @@ export default function Home() {
     },
   ];
 
+  const extendedData = [...cardsData, ...cardsData, ...cardsData];
+
   // Tableau pour la ligne du haut
-  const topItems = cardsData.map((card, i) => (
-    <div key={i} style={{ width: 320 }}>
+  const topItems = extendedData.map((card, i) => (
+    <div key={i} style={{ width: 320, height: 240 }}>
       <Card
         name={card.name}
         username={card.username}
@@ -84,8 +86,8 @@ export default function Home() {
   ));
 
   // Tableau ligne du bas
-  const bottomItems = cardsData.map((card, i) => (
-    <div key={i} style={{ width: 320 }}>
+  const bottomItems = extendedData.map((card, i) => (
+    <div key={i} style={{ width: 320, height: 240 }}>
       <Card
         name={card.name}
         username={card.username}
